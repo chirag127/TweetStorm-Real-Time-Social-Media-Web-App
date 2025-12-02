@@ -1,89 +1,65 @@
-# Contributing to TweetStorm-Real-Time-Social-Media-Web-App
+# 🤝 Contributing to StreamSphere-Real-Time-Social-Platform-React-Template
 
-## 1. Philosophy and Alignment
+Thank you for considering contributing to `StreamSphere-Real-Time-Social-Platform-React-Template`! We aim to maintain a high bar for code quality, performance, and developer experience, reflecting the **Apex Technical Authority** standards.
 
-Welcome to the development of **TweetStorm-Real-Time-Social-Media-Web-App**. As defined by the Apex Technical Authority, all contributions must adhere to the **Zero-Defect, High-Velocity, Future-Proof** philosophy. We treat this repository as a professional, high-availability system.
+## 1. Code of Conduct
 
-Before submitting a contribution, please ensure you have reviewed the **`AGENTS.md`** file to understand the core architectural mandates (SOLID, DRY, FSD/Modular Monolith principles depending on context) and the technology stack.
+This project adheres to the Contributor Covenant Code of Conduct. Please review the [CODE_OF_CONDUCT.md](https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template/blob/main/CODE_OF_CONDUCT.md) to understand our expectations for participation.
 
-## 2. Repository Context and Stack
+## 2. How to Contribute
 
-This project is a modern, full-stack JavaScript/TypeScript application designed for real-time interaction. Contributions should target the established modern toolchain:
+We welcome contributions in the form of bug reports, feature requests, documentation improvements, and code submissions.
 
-*   **Language:** TypeScript (Strict Mode)
-*   **Build/Bundling:** Vite 7+
-*   **Styling:** TailwindCSS v4
-*   **Real-Time:** WebSockets (e.g., Socket.io or native WS implementation)
-*   **Testing:** Vitest (Unit) and Playwright (E2E)
-*   **Architecture:** Feature-Sliced Design (FSD) for frontend modularity.
+### 2.1. Reporting Bugs
 
-## 3. Code of Conduct
+*   **Reproduce:** Try to reproduce the bug reliably.
+*   **Search:** Check if the bug has already been reported.
+*   **Report:** If it's a new bug, please open an issue using the **Bug Report** template. Provide clear steps to reproduce, expected vs. actual behavior, environment details (browser, OS), and relevant screenshots or logs.
 
-This project adheres to the Contributor Covenant, Version 2.1. All contributors are expected to uphold these standards. Report any unacceptable behavior via a direct message to user `chirag127` or through the appropriate GitHub reporting mechanism.
+### 2.2. Requesting Features
 
-## 4. Contribution Workflow
+*   **Search:** Check if the feature has already been requested.
+*   **Propose:** If it's a new idea, please open an issue using the **Feature Request** template. Clearly describe the proposed functionality and the problem it aims to solve.
 
-We follow a structured workflow to maintain integrity and velocity:
+### 2.3. Contributing Code
 
-### Step 1: Preparation
+*   **Fork:** Fork the repository from `https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template`.
+*   **Branch:** Create a new branch for your feature or fix (e.g., `feature/new-real-time-chat` or `fix/login-bug`).
+*   **Develop:** Implement your changes. Ensure your code adheres to the project's coding standards and passes all tests.
+*   **Test:** Write new tests or update existing ones to cover your changes. Run the test suite locally using `npm run test`.
+*   **Lint & Format:** Ensure your code is clean and formatted using `npm run lint` and `npm run format`.
+*   **Commit:** Make clear, concise commit messages. Follow conventional commits if possible.
+*   **Pull Request:** Submit a Pull Request (PR) targeting the `main` branch of the original repository. Provide a detailed description of your changes, linking to any relevant issues.
 
-1.  **Fork the Repository:** Create a fork of `chirag127/TweetStorm-Real-Time-Social-Media-Web-App`.
-2.  **Clone:** Clone your fork locally:
-    bash
-    git clone https://github.com/YOUR_USERNAME/TweetStorm-Real-Time-Social-Media-Web-App.git
-    cd TweetStorm-Real-Time-Social-Media-Web-App
-    
-3.  **Create a Feature Branch:** Ensure your branch name clearly indicates the scope of your change (e.g., `feat/websocket-reconnect`, `fix/feed-rendering-bug`, `refactor/auth-service`).
-    bash
-    git checkout -b <branch-name>
-    
+## 3. Development Environment Setup
 
-### Step 2: Development and Verification
+To set up the development environment, please refer to the `README.md` file for detailed instructions on installing dependencies and running the project locally.
 
-1.  **Implement Changes:** Focus on creating clean, well-documented code that aligns with the established FSD/Modular architecture.
-2.  **Linting and Formatting:** Before committing, ensure all code passes the necessary checks enforced by Biome (or equivalent for JS/TS stack):
-    bash
-    npm run lint
-    npm run format
-    
-3.  **Testing:** **All new features MUST include corresponding unit and/or integration tests.** Existing tests must pass.
-    bash
-    npm run test:unit  # Run Vitest
-    npm run test:e2e     # Run Playwright
-    
-4.  **Documentation Update:** If you modify APIs, core logic, or introduce new concepts, update the relevant documentation files (`README.md`, `AGENTS.md`, etc.).
+bash
+# Example setup commands (refer to README.md for specifics)
+git clone https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template.git
+cd StreamSphere-Real-Time-Social-Platform-React-Template
+npm install
 
-### Step 3: Submission
 
-1.  **Commit Messages:** Use Conventional Commits (e.g., `feat:`, `fix:`, `chore:`, `refactor:`).
-2.  **Push:** Push your changes to your fork:
-    bash
-    git push origin <branch-name>
-    
-3.  **Open a Pull Request (PR):** Navigate to the main repository and open a PR from your feature branch targeting the `main` branch.
+## 4. Coding Standards & Principles
 
-## 5. Pull Request Requirements
+We strive for excellence by adhering to these principles:
 
-Every PR must use the **PULL_REQUEST_TEMPLATE.md** and meet these criteria:
+*   **SOLID:** Design principles for maintainable and understandable object-oriented software.
+*   **DRY (Don't Repeat Yourself):** Avoid redundancy in code.
+*   **YAGNI (You Ain't Gonna Need It):** Implement only what is necessary now.
+*   **Apex Standards:** Follow the technical directives outlined in `AGENTS.md`.
+*   **TypeScript (Strict):** Utilize TypeScript's strict mode for enhanced type safety.
+*   **Vite & TailwindCSS:** Leverage these for optimal frontend performance and styling.
+*   **Testing:** Write comprehensive unit and end-to-end tests.
 
-*   **Automated Checks:** All GitHub Actions workflows (CI build, linting, testing) must pass successfully.
-*   **Self-Review:** Review your own changes for clarity, adherence to SOLID/DRY principles, and performance implications.
-*   **Context:** Clearly describe *what* was changed and *why* it was changed, referencing any relevant issues.
+## 5. AI Agent Directives
 
-## 6. Reporting Issues and Security Vulnerabilities
+This project integrates with AI agents as defined in `AGENTS.md`. Ensure any contributions align with these directives, particularly regarding AI model interactions, data handling, and ethical considerations.
 
-*   **Bugs:** Use the **Bug Report** issue template located in `.github/ISSUE_TEMPLATE/bug_report.md`.
-*   **Security:** Please follow responsible disclosure protocols. Report security concerns privately via **SECURITY.md** guidelines or directly to `security@chirag127.com` before making a public issue.
+## 6. Submitting Your Contributions
 
-## 7. Repository Links (Static References)
+We value your effort. All contributions will be reviewed promptly. By submitting a contribution, you agree that your contribution will be licensed under the **CC BY-NC** license.
 
-For immediate reference during development, here are key development standards:
-
-| Standard | Location |
-| :--- | :--- |
-| **CI/CD Pipeline** | `.github/workflows/ci.yml` |
-| **Testing Requirements** | `AGENTS.md` |
-| **License Terms** | `LICENSE` (CC BY-NC 4.0) |
-| **Project Metadata** | `badges.yml` |
-
-*Thank you for investing your time and expertise into this project. We appreciate high-quality contributions.*
+We look forward to your contributions to make `StreamSphere-Real-Time-Social-Platform-React-Template` even better!
