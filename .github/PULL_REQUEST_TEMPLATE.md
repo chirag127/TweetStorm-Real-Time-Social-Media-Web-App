@@ -1,63 +1,53 @@
-# 🚀 Pull Request Template: Apex Contribution Standard
+# 🚀 Pull Request Checklist & Architectural Review
 
-**Project:** `TweetStorm-Real-Time-Social-Media-Web-App`
+**Repository:** `StreamSphere-Real-Time-Social-Platform-React-Template`
 
-By submitting this Pull Request (PR), you affirm adherence to the **Apex Technical Authority** guidelines: Zero-Defect, High-Velocity, Future-Proof.
-
----
-
-## ✅ Checklist
-
-Before submitting, please verify the following:
-
-- [ ] **Self-Review:** Have you reviewed your changes against the **Architectural Principles** (SOLID, DRY)?
-- [ ] **Testing:** Have you added or updated necessary unit/integration tests? (See Verification Commands below).
-- [ ] **Linting/Formatting:** Does the code pass local checks using the Apex toolchain? (`npm run lint` or equivalent).
-- [ ] **Documentation:** Are relevant sections of `README.md` or related documentation updated?
-- [ ] **Branch:** Is the source branch up-to-date with `main`/`master` (squash/rebase recommended)?
+This template enforces the **Zero-Defect, High-Velocity, Future-Proof** standard defined by the Apex Technical Authority.
 
 ---
 
-## 📝 Description of Changes
+## 📝 Summary of Changes
 
-**BLUF (Bottom Line Up Front):** Briefly summarize the feature, fix, or refactor this PR introduces. (Max 3 sentences).
-
-<!-- Detailed breakdown of the changes, why they were made, and any trade-offs considered. -->
+<!-- Briefly describe the purpose of this PR. What problem does it solve or feature does it add? -->
 
 ## 🧠 Architectural Alignment
 
-How does this change align with the current architecture (Feature-Sliced/Modular Monolith)?
+This section ensures the changes align with the established **Feature-Sliced Design (FSD)** / **Apex Toolchain** principles.
 
-*   **Feature/Module Affected:** 
-*   **Impact Assessment:** (e.g., Increased coupling, performance uplift, security enhancement).
+- [ ] **Design Pattern:** Have I adhered to SOLID principles? (Specifically, Single Responsibility Principle).
+- [ ] **State Management:** Is state handled immutably and efficiently (e.g., using Signals or Context correctly)?
+- [ ] **Performance:** Are there any unnecessary re-renders or expensive operations introduced? (Check hooks usage).
+- [ ] **FSD Compliance:** Are layers respected? (e.g., `features/` components should not import directly from other `features/`).
+- [ ] **Modularity:** Is the component/module reusable? If not, is there a clear justification?
 
-## 🔗 Related Issues
+## 🛠️ Technical Verification
 
-Closes, references, or addresses issues:
+Ensure all development prerequisites are met before merging.
 
-*   `Closes #<ISSUE_NUMBER>`
-*   `Fixes #<ISSUE_NUMBER>`
+### Automated Checks (CI/CD)
+
+- [ ] **Build:** Did the main CI pipeline (`ci.yml`) pass? (Checks: Linting, Type-Checking, Build).
+- [ ] **Testing:** Have all relevant Unit Tests (`Vitest`) and Integration Tests (`Playwright`) been updated or written to cover new logic?
+- [ ] **Linting/Formatting:** Is the codebase 100% compliant with **Biome** standards? (`npm run lint` or `npm run format`).
+
+### Manual Checks
+
+- [ ] **Dependencies:** Have I updated the package lock file (`package-lock.json` or equivalent) if new dependencies were added? (If using `uv` or equivalent package manager, this step is adapted).
+- [ ] **Documentation:** Are affected parts of `README.md` or inline code comments updated?
+- [ ] **Cross-Browser/Device:** (If applicable) Tested functionality on primary target browsers/devices.
+
+## 🚨 Security & Compliance
+
+- [ ] **Secrets Exposure:** Verified that no environment variables, API keys, or sensitive information are committed to Git.
+- [ ] **Vulnerabilities:** If external libraries were updated, have I run `npm audit` (or equivalent) and addressed critical/high findings?
+- [ ] **Licensing:** Changes do not violate the **CC BY-NC 4.0** license terms.
 
 ---
 
-## 🤖 Agent Directives Verification (Crucial for CI)
+## 🖼️ Visual Previews (Screenshots/Demos)
 
-Ensure your local environment validates against the standards defined in `.github/AGENTS.md`.
+<!-- If this PR affects the UI, please include before/after screenshots or a brief video link. -->
 
-**For this JavaScript/TypeScript stack, execute the following:**
+**Before:**
 
-bash
-# 1. Dependency Resolution & Setup (using uv/npm standards)
-npm install
-
-# 2. Fast Linting & Formatting Check (Biome)
-npm run format:check
-
-# 3. Unit Testing (Vitest)
-npm run test:unit
-
-# 4. End-to-End Verification (Playwright/Cypress)
-npm run test:e2e
-
-
-Failure in any of these steps indicates a required rollback or correction before merging.
+**After:**
