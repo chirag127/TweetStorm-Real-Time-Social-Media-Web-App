@@ -1,49 +1,96 @@
 ---
-name: "Bug Report 🐛"
-about: Report a reproducible bug to help us improve TweetStorm
-title: "[BUG]: <Brief, descriptive title>"
-labels: ["bug", "triage"]
-assignees: []
----
+name: Bug Report
+about: Report an issue with StreamSphere
+title: "BUG: "
+labels: "bug"
+assignees:
 
-Thank you for taking the time to report a bug in **TweetStorm-Real-Time-Social-Media-Web-App**! Your detailed reports help us maintain a high-quality, stable application for everyone.
+body:
+  - type: markdown
+    attributes:
+      value: | # IMPORTANT: All links must use the new repository name!
+        Please provide a clear and concise description of the bug.
+        
+        **Repository Link:** https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template
+        
+        Thank you for helping improve StreamSphere!
 
-Before submitting, please ensure you have completed the following steps:
+  - type: input
+    id: browser
+    name: Browser & Version
+    attributes:
+      label: Which browser are you using?
+      description: Please specify the browser and its version (e.g., Chrome 126, Firefox 120).
+      placeholder: "e.g. Chrome 126"
+    validations:
+      required: true
 
-- [ ] I have searched the [existing issues](https://github.com/chirag127/TweetStorm-Real-Time-Social-Media-Web-App/issues) to ensure this bug has not already been reported.
-- [ ] I have reproduced the bug in the latest version of the application.
-- [ ] I have read the [CONTRIBUTING.md](https://github.com/chirag127/TweetStorm-Real-Time-Social-Media-Web-App/blob/main/.github/CONTRIBUTING.md) guidelines.
+  - type: input
+    id: os
+    name: Operating System
+    attributes:
+      label: What OS are you using?
+      description: Please specify the operating system (e.g., Windows 11, macOS Sonoma, Ubuntu 22.04).
+      placeholder: "e.g. Windows 11"
+    validations:
+      required: true
 
----
+  - type: textarea
+    id: steps
+    name: Steps to Reproduce
+    attributes:
+      label: Steps to reproduce the behavior:
+      description: Provide a clear sequence of steps that will reproduce the bug.
+      placeholder: |
+        1. Go to '/some-page'
+        2. Click on the 'Button'
+        3. Observe the error...
+    validations:
+      required: true
 
-## 🐞 Describe the Bug
-A clear and concise description of what the bug is.
+  - type: textarea
+    id: expected_behavior
+    name: Expected Behavior
+    attributes:
+      label: What did you expect to happen?
+      description: Describe what you expected to occur.
+      placeholder: "The UI should update to show the new data."
+    validations:
+      required: true
 
-## 👣 To Reproduce
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+  - type: textarea
+    id: actual_behavior
+    name: Actual Behavior
+    attributes:
+      label: What actually happened?
+      description: Describe what actually occurred, and include any error messages.
+      placeholder: "The UI remained unchanged, and a JavaScript error appeared in the console."
+    validations:
+      required: true
 
-## 👍 Expected Behavior
-A clear and concise description of what you expected to happen.
+  - type: textarea
+    id: additional_context
+    name: Additional Context
+    attributes:
+      label: Add any other context about the problem here.
+      description: |
+        Screenshots, logs, relevant configuration files, or links to related issues.
+        Remember to use the correct repository link: https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template
+      placeholder: "e.g. Attached screenshot shows the error in the browser console."
+    validations:
+      required: false
 
-## 👎 Actual Behavior
-A clear and concise description of what actually happened, including any error messages displayed in the UI or console.
-
-## 🖥️ Screenshots / Videos
-If applicable, add screenshots or videos to help explain your problem.
-
-## ⚙️ Environment
-Please provide the following information about your environment:
-
-- **Operating System:** [e.g., macOS Ventura 13.5, Windows 11, Ubuntu 22.04]
-- **Browser:** [e.g., Chrome 118, Firefox 119, Safari 17]
-- **TweetStorm Version:** [e.g., v1.0.0, commit hash]
-- **Node.js Version:** [e.g., 18.x.x]
-
-## 📝 Additional Context
-Add any other context about the problem here (e.g., frequency of occurrence, specific user roles affected, previous actions before the bug appeared).
-
----
+  - type: markdown
+    attributes:
+      value: | # IMPORTANT: All links must use the new repository name!
+        ### Technical Stack
+        
+        - **Repository:** https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template
+        - **Language:** JavaScript
+        - **Frontend Framework:** React 19+
+        - **Build Tool:** Vite 7+
+        - **Styling:** TailwindCSS v4+
+        - **Runtime:** Node.js 20+
+        - **Testing Framework:** Vitest, Playwright
+        
+        For more details on the Apex Toolchain and architectural principles, please refer to the [AGENTS.md](https://github.com/chirag127/StreamSphere-Real-Time-Social-Platform-React-Template/blob/main/AGENTS.md) file.
