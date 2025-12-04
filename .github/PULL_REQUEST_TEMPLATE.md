@@ -1,53 +1,65 @@
-# 🚀 Pull Request Checklist & Architectural Review
+# Pull Request Template: StreamSphere Enhancement Proposal
 
-**Repository:** `StreamSphere-Real-Time-Social-Platform-React-Template`
+**Welcome, Contributor!**
 
-This template enforces the **Zero-Defect, High-Velocity, Future-Proof** standard defined by the Apex Technical Authority.
-
----
-
-## 📝 Summary of Changes
-
-<!-- Briefly describe the purpose of this PR. What problem does it solve or feature does it add? -->
-
-## 🧠 Architectural Alignment
-
-This section ensures the changes align with the established **Feature-Sliced Design (FSD)** / **Apex Toolchain** principles.
-
-- [ ] **Design Pattern:** Have I adhered to SOLID principles? (Specifically, Single Responsibility Principle).
-- [ ] **State Management:** Is state handled immutably and efficiently (e.g., using Signals or Context correctly)?
-- [ ] **Performance:** Are there any unnecessary re-renders or expensive operations introduced? (Check hooks usage).
-- [ ] **FSD Compliance:** Are layers respected? (e.g., `features/` components should not import directly from other `features/`).
-- [ ] **Modularity:** Is the component/module reusable? If not, is there a clear justification?
-
-## 🛠️ Technical Verification
-
-Ensure all development prerequisites are met before merging.
-
-### Automated Checks (CI/CD)
-
-- [ ] **Build:** Did the main CI pipeline (`ci.yml`) pass? (Checks: Linting, Type-Checking, Build).
-- [ ] **Testing:** Have all relevant Unit Tests (`Vitest`) and Integration Tests (`Playwright`) been updated or written to cover new logic?
-- [ ] **Linting/Formatting:** Is the codebase 100% compliant with **Biome** standards? (`npm run lint` or `npm run format`).
-
-### Manual Checks
-
-- [ ] **Dependencies:** Have I updated the package lock file (`package-lock.json` or equivalent) if new dependencies were added? (If using `uv` or equivalent package manager, this step is adapted).
-- [ ] **Documentation:** Are affected parts of `README.md` or inline code comments updated?
-- [ ] **Cross-Browser/Device:** (If applicable) Tested functionality on primary target browsers/devices.
-
-## 🚨 Security & Compliance
-
-- [ ] **Secrets Exposure:** Verified that no environment variables, API keys, or sensitive information are committed to Git.
-- [ ] **Vulnerabilities:** If external libraries were updated, have I run `npm audit` (or equivalent) and addressed critical/high findings?
-- [ ] **Licensing:** Changes do not violate the **CC BY-NC 4.0** license terms.
+Thank you for dedicating your expertise to elevate `StreamSphere-Real-Time-Social-Platform-React-Web-App`. Please use this template to provide clarity and accelerate the review process, adhering to the Apex Technical Authority standards.
 
 ---
 
-## 🖼️ Visual Previews (Screenshots/Demos)
+## 🚀 Feature / Fix Type
 
-<!-- If this PR affects the UI, please include before/after screenshots or a brief video link. -->
+<!-- Select one or more applicable categories -->
 
-**Before:**
+- [ ] 🐛 Bug Fix (Non-breaking change which fixes an issue)
+- [ ] ✨ New Feature (Non-breaking change which adds functionality)
+- [ ] 📚 Documentation Update
+- [ ] 🏗️ Refactoring / Code Cleanup (No functional change)
+- [ ] 🧪 Test Update (Adding or fixing tests)
+- [ ] 📐 Style/Formatting (Using Lint/Formatter changes)
+- [ ] 🔖 Release Preparation
 
-**After:**
+## 🎯 Proposed Changes
+
+<!-- Describe what this PR does. Be concise but complete. Relate changes back to system architecture or user value. -->
+
+This Pull Request introduces changes related to the following:
+
+1. 
+2. 
+3. 
+
+### Architectural Impact (Mandatory)
+
+*   **Pattern Adherence:** Does this change strictly follow **SOLID**, **DRY**, and **YAGNI** principles?
+*   **Dependency Changes:** Were any new dependencies added or existing ones updated? (If yes, update `package.json` and review `uv`/`npm` lockfiles).
+
+## ✅ Verification Strategy
+
+<!-- How can reviewers test and verify your changes? Be specific about steps and expected outcomes. -->
+
+**Local Verification Steps:**
+
+1.  Checkout branch: `git checkout <branch-name>`
+2.  Install dependencies: `npm install` (or relevant command based on Stack specification in `AGENTS.md`).
+3.  Run tests: `npm run test:unit` and `npm run test:e2e`.
+4.  Manual Test Case 1:
+    *   **Action:** 
+    *   **Expected Result:** 
+
+**Relevant Issue(s)**
+
+Closes #[Issue Number] (if applicable)
+Fixes #[Issue Number] (if applicable)
+
+## 📖 Context & Rationale
+
+<!-- Why is this change necessary? Link to discussions or user stories if available. For major features, reference the architectural decision record (if one exists). -->
+
+## 📝 Reviewer Checklist
+
+*   [ ] The code is written entirely in **Strict TypeScript** (or appropriately typed, given the JS base).
+*   [ ] New components/logic adhere to **Feature-Sliced Design (FSD)** principles if applicable to the affected area.
+*   [ ] All new code includes relevant **Vitest** unit tests.
+*   [ ] E2E scenarios updated/added using **Playwright**.
+*   [ ] Documentation (Code comments, `README.md` sections if required) has been updated.
+*   [ ] Badge dependencies (`badges.yml` / `README.md`) are untouched unless this PR specifically addresses CI/CD or coverage.
